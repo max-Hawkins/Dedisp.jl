@@ -67,7 +67,7 @@ function dedisp!(output::CuArray{A,2}, source, plan::CuArray{C,2}) where {A,C}
            shmem=sizeof(UInt32) * n_chan)
 
     # Normalize
-    return output ./ n_chan
+    return output
 end
 
 # Source is n_samp * n_chan
